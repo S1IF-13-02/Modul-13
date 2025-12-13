@@ -13,9 +13,17 @@ func main(){
 
 	for{
 		var donasi int
+		
 		donatur++
+		
 		fmt.Printf("Donatur ke-%d: Menyumbang ", donatur)
 		fmt.Scan(&donasi)
+
+		if donasi <= 0 {
+		fmt.Println("Donasi yang dimasukkan harus lebih dari 0.")
+		donatur--
+		continue
+		}
 
 		total_donasi += donasi
 
